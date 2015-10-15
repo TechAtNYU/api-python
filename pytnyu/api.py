@@ -1,4 +1,4 @@
-import os
+import os, json, requests
 
 from pytnyu import TNYU_API_VERSION
 
