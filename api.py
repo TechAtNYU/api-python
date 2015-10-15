@@ -1,4 +1,4 @@
-from api-python import TNYU_API_VERSION
+from pytnyu import TNYU_API_VERSION
 
 class TNYUAPI(object):
     API_ROOT = os.path.join('https://api.tnyu.org/', TNYU_API_VERSION)
