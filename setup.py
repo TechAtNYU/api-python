@@ -11,6 +11,6 @@ setup(
     version='0.0.1',
     install_requires=['requests'],
     namespace_packages=['pytnyu'],
-    packages=['pytnyu'],
-    name='techatnyu',
+    packages=['pytnyu.client'],
+    name='pytnyu',
 )
