@@ -11,7 +11,7 @@ class TNYUAPI(object):
         headers = {
             'content-type': 'application/vnd.api+json',
             'accept': 'application/*, text/*',
-            'x-api-key': self.api_root
+            'x-api-key': self.api_key
             }
         r = requests.get(self.api_root + '/' + resource_name, headers=headers, verify=False)
         return json.loads(r.text)
