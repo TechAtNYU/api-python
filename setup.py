@@ -8,7 +8,7 @@ setup(
     author='TechatNYU',
     url='https://github.com/TechAtNYU/pytnyu',
     author_email='hello@techatnyu.org',
-    version='0.0.1',
+    version='0.0.3',
     install_requires=['requests'],
     namespace_packages=['pytnyu'],
     packages=['pytnyu.client'],
