@@ -11,5 +11,6 @@ setup(
     version='0.0.4',
     install_requires=['requests'],
     namespace_packages=['pytnyu'],
+    packages=['pytnyu'],
     name='pytnyu',
 )
