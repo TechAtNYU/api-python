@@ -1,5 +1,3 @@
-import os, sys
-
 from pytnyu import TNYUAPI
 
 if __name__ == '__main__':

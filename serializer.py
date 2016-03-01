@@ -3,6 +3,7 @@ import json
 
 
 class Document(object):
+
     def __init__(self):
         self.s = {}
 
@@ -13,17 +14,17 @@ class Document(object):
     def to_json(self, **kwargs):
         if kwargs.get('indent') is not None:
             return json.dumps(self.s, indent=kwargs['indent'])
-        else:
-            return json.dumps(self.s)
+        return json.dumps(self.s)
 
 
 class Link(object):
+
     def __init__(self, resource_type, resource_name):
-        self.s = {'type': resource_type,
-                  'id': resource_name}
+        self.s = {'type': resource_type, 'id': resource_name}
 
 
 class Resource(object):
+
     def __init__(self, resource_type, attributes, relationships):
         self.s = {}
         self.s['type'] = resource_type
@@ -45,7 +46,8 @@ class Resource(object):
             self.s['relationships'][relationship_name] = {}
             self.s['relationships'][relationship_name]['data'] = []
         if resource.__class__.__name__ == 'Link':
-            self.s['relationships'][relationship_name]['data'].append(resource.s)
+            self.s['relationships'][relationship_name][
+                'data'].append(resource.s)
 
 
 # SAMPLE USAGE
@@ -61,7 +63,7 @@ question_ids = [
     '5647fe4b0dd50ccc027da8c1',
     '5647fe54c64745a657ec39d1',
     '5647fe685f92f23c34bc893b'
-    ]
+]
 
 # define attributes
 survey_attributes = {
