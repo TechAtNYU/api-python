@@ -24,9 +24,10 @@ class Link(object):
 
 class Resource(object):
 
-    def __init__(self, resource_type, attributes, relationships):
+    def __init__(self, resource_type, resource_id, attributes, relationships):
         self.s = {}
         self.s['type'] = resource_type
+        self.s['id'] = resource_id
         self.s['attributes'] = {}
         self.s['relationships'] = {}
 
