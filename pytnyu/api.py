@@ -2,6 +2,7 @@ import os
 import requests
 
 from . import TNYU_API_VERSION
+from .serializer import Resource
 
 API_URL = "https://api.tnyu.org/"
 
@@ -17,7 +18,7 @@ class TNYUAPI(object):
         headers = {
             'content-type': 'application/vnd.api+json',
             'accept': 'application/*, text/*',
-            'x-api-key': self.api_key
+            'authorization': 'Bearer ' + self.api_key
         }
 
         r = requests.get(
